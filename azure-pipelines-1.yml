@@ -18,7 +18,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/1/s'
+    workingDirectory: 'C:\DevopsAgent\vsts-agent-win-x64-4.258.1\_work\1\s'
     backendServiceArm: 'Subscription 1(7612edd3-0c0f-4529-a4c1-b982bc1fdb9b)'
     backendAzureRmStorageAccountName: 'bhaweshstg'
     backendAzureRmContainerName: 'bhaweshco'
