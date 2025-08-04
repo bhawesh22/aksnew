@@ -1,5 +1,5 @@
 trigger:
-- none  # Manually run karne ke liye
+- main 
 
 pool:
   name: bhawesh
