@@ -28,15 +28,16 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'validate'
-
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'plan'
-
+    environmentServiceNameAzureRM: 'Subscription 1(7612edd3-0c0f-4529-a4c1-b982bc1fdb9b)'
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'apply'
     environmentServiceNameAzureRM: 'Subscription 1(7612edd3-0c0f-4529-a4c1-b982bc1fdb9b)'
+    allowTelemetryCollection: false
+    autoApprove: true
     
