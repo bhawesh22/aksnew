@@ -28,7 +28,7 @@ resource "azurerm_kubernetes_cluster" "kubernetes" {
   location            = "West US"
   resource_group_name = "bhawesh-rg"
   dns_prefix          = "bhawesh-k8s"
-  kubernetes_version  = "1.32.7"
+  kubernetes_version  = "1.32.6"
 
   default_node_pool {
     name            = "default"
