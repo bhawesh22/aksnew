@@ -2,9 +2,9 @@ trigger:
 - main 
 
 pool:
-  name: bhawesh
+  name: bhaweshnew
   demands:
-    - agent.name -equals classicnew
+    - agent.name -equals newagent
 
 steps:
 - task: TerraformInstaller@1
