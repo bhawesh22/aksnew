@@ -17,16 +17,16 @@ provider "azurerm" {
   
 }
 
-resource "azurerm_resource_group" "resource" {
-  name     = "bhawesh-rg1"
+resource "azurerm_resource_group" "resource1" {
+  name     = "bhawesh-rg2"
   location = "West US "
 }
   
 
 resource "azurerm_kubernetes_cluster" "kubernetes" {
-  name                = "bhawesh-k8s"
+  name                = "bhawesh-aks"
   location            = "West US"
-  resource_group_name = "bhawesh-rg"
+  resource_group_name = "bhawesh-rg2"
   dns_prefix          = "bhawesh-k8s"
   kubernetes_version  = "1.32.6"
 
