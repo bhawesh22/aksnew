@@ -16,5 +16,17 @@ steps:
   inputs:
     terraformVersion: 'latest'
 
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/s'
+    backendServiceArm: 'Subscription 1(7612edd3-0c0f-4529-a4c1-b982bc1fdb9b)'
+    backendAzureRmStorageAccountName: 'bhaweshstg'
+    backendAzureRmContainerName: 'bhaweshco'
+    backendAzureRmKey: 'bhawesh.tfstate'
+
+
+
 
 
