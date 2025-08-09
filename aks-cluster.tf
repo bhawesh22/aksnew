@@ -18,15 +18,15 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "resource" {
-  name     = "soumya"
+  name     = "bhawesh_rg"
   location = "West US "
 }
   
 
 resource "azurerm_kubernetes_cluster" "kubernetes" {
-  name                = "soumya-aks"
+  name                = "bhawesh-aks"
   location            = "West US"
-  resource_group_name = "soumya"
+  resource_group_name = "bhawesh_rg"
   dns_prefix          = "soumya-k8s"
   kubernetes_version  = "1.32.6"
 
