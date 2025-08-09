@@ -11,29 +11,29 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = "7612edd3-0c0f-4529-a4c1-b982bc1fdb9b"
+  subscription_id = "9f199aee-1ad7-464f-bd74-4b88ef990086"
 
 
   
 }
 
-resource "azurerm_resource_group" "resource1" {
-  name     = "bhawesh-rg2"
+resource "azurerm_resource_group" "resource" {
+  name     = "soumya"
   location = "West US "
 }
   
 
 resource "azurerm_kubernetes_cluster" "kubernetes" {
-  name                = "bhawesh-aks"
+  name                = "soumya-aks"
   location            = "West US"
-  resource_group_name = "bhawesh-rg2"
-  dns_prefix          = "bhawesh-k8s"
+  resource_group_name = "soumya"
+  dns_prefix          = "soumya-k8s"
   kubernetes_version  = "1.32.6"
 
   default_node_pool {
     name            = "default"
     node_count      = 2
-    vm_size         = "Standard_D2ps_v6"
+    vm_size         = "Standard_A2_v2"
     os_disk_size_gb = 30
   }
 
