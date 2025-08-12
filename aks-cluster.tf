@@ -5,6 +5,12 @@ terraform {
       version = "4.34.0"
     }
   }
+backend "azurerm" {
+    resource_group_name   = "stg_rg"
+    storage_account_name  = "backednstg"      
+    container_name        = "bhawesh-tfstate"
+    key                   = "logs.tfstate"
+  }
 
 }
 
