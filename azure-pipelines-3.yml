@@ -15,5 +15,6 @@ steps:
     command: 'init'
     backendServiceArm: 'SPN_Bhawesh'  # Name of the Azure service connection
     backendAzureRmStorageAccountName: 'backednstg'
+    workingDirectory: $(Build.SourcesDirectory)
     backendAzureRmContainerName: 'bhawesh-tfstate'
     backendAzureRmKey: 'logs.tfstate'
