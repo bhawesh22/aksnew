@@ -7,11 +7,20 @@ trigger:
 - none  # Manually run karne ke liye
 
 pool:
-  name: bhawesh
+  name: bhaweshnew
   demands:
-    - agent.name -equals classicnew
+    - agent.name -equals newagent
 
 steps:
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'bhaweshpipeline'
+    backendAzureRmStorageAccountName: 'backednstg'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    backendAzureRmContainerName: 'bhawesh-tfstate'
+    backendAzureRmKey: 'bhawesh.tfstate'
